@@ -1,0 +1,170 @@
+/* CSS ajustado */
+
+:root {
+    --color-white: #6f0094; 
+    --color-dark1: #ffffff;
+    --color-dark2: #e6acfc;
+    --color-dark3: #171617;
+    --color-dark4: #9800c7;
+    --color-dark5: #ffffff;
+    --color-purple: #9800c7;
+}
+
+#initexto {
+    margin: 3rem;
+    color: #2d2d2d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-dark1);
+    color: var(--color-white);
+}
+
+.img_logo_header {
+    width: 250px;
+    height: 60px;
+    padding-left: 30px;
+}
+.logo_header {
+    margin-right: auto; /* Para garantir que a logo esteja na margem esquerda */
+}
+
+.header,
+.navigation_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header {
+    background-color: var(--color-dark2);
+    justify-content: space-between;
+    padding: 0%;
+    height: 5em;
+    box-shadow: 1px 1px 5px var(--color-dark4);
+}
+
+.navigation_header {
+    gap: 3em;
+    z-index: 2;
+}
+
+.content {
+    padding-top: 1em; /* Reduzir o valor para mover a galeria para cima */
+    text-align: center;
+    height: 6vh;
+    transition: 1s;
+}
+
+.navigation_header a {
+    text-decoration: none;
+    color: var(--color-purple);
+    transition: 0.25s;
+    font-weight: bold;
+}
+
+.navigation_header a:hover {
+    color: var(--color-white);
+}
+
+.active {
+    background: var(--color-dark3);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn_icon_header {
+    background: transparent;
+    border: none;
+    color: var(--color-white);
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .navigation_header {
+        position: absolute;
+        flex-direction: column !important;
+        top: 0;
+        background: var(--color-dark5);
+        height: 100%;
+        width: 35vw;
+        padding: 1em;
+        animation-duration: 1s;
+        margin-left: -100vw;
+    }
+    .btn_icon_header {
+        display: block;
+    }
+}
+
+
+/* menu lateral */
+a{
+    color:#ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+    
+}
+
+
+.menu-list{
+    list-style: none;
+    display: flex;
+}
+
+.menu-list li {
+letter-spacing: 3px;
+margin-left: 20px;
+margin-right: 12px;
+}
+
+
+/* galeria */
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2vw;
+    padding: 0 2vw;
+    margin-top: 1em; /* Adicionar uma margem superior mínima */
+}
+
+.gallery-item {
+    width: 350px;
+    height: 300px;
+    border: 10px solid #ffffff;
+    box-shadow: 5px 5px 5px #6c6c6c;
+    transition: transform 0.1s linear;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-item:hover{
+    transform: scale(1.1);
+}
+
+footer{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-style: italic;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
